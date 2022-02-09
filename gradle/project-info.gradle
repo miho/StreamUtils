@@ -10,10 +10,6 @@ ext.publishingInfo.developerAlias        = 'miho'
 ext.publishingInfo.developerEmail        = 'info@michaelhoffer.de'
 ext.publishingInfo.inceptionYear         = '2019'
 
-ext.publishingInfo.bintray.repo          = 'Miho-Commons'
-ext.publishingInfo.bintray.userOrg       = 'miho'
-ext.publishingInfo.bintray.name          = project.name
-
 ext.publishingInfo.desc                  = 'Stream utilities.'
 ext.publishingInfo.license               = 'Apache-2.0'
 ext.publishingInfo.licenseUrl            = 'https://github.com/miho/StreamUtils/blob/master/LICENSE'
