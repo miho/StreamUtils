@@ -18,4 +18,4 @@ ext.publishingInfo.websiteUrl            = 'https://github.com/miho/StreamUtils'
 ext.publishingInfo.issueTrackerUrl       = 'https://github.com/miho/StreamUtils/issues'
 ext.publishingInfo.vcsUrl                = 'https://github.com/miho/StreamUtils.git'
 
-ext.publishingInfo.pomName               =  ext.publishing.artifactId
+ext.publishingInfo.pomName               =  ext.publishingInfo.artifactId
