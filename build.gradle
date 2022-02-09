@@ -18,7 +18,7 @@ rootProject.file("config/common.properties").withInputStream { commonProps.load(
 apply from: 'gradle/publishing.gradle'
 
 wrapper {
-    gradleVersion = '6.8'
+    gradleVersion = '7.3.3'
 }
 
 sourceCompatibility = '11'

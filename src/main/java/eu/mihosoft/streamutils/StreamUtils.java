@@ -22,12 +22,10 @@
  */
 package eu.mihosoft.streamutils;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
 
 /**
@@ -82,10 +80,10 @@ public final class StreamUtils {
         byte[] readData = new byte[1];
         int i = 0;
 
-        while(true) {
+        while(!Thread.currentThread().isInterrupted()) {
 
             // try to read a single byte
-            int readBytes = inputStream.read(readData,0,1);
+            int readBytes = inputStream.readNBytes(readData,0,1);
 
             // if no data could be read throw an exception
             if(readBytes < 1) throw new IOException("Cannot read input until requested delimiter. Buffer: " + bos.toString(charset));
@@ -109,8 +107,9 @@ public final class StreamUtils {
             if(i < bufferSize) {
                 i++;
             }
-
         }
+
+        throw new InterruptedIOException();
     }
 
     // used for debugging
